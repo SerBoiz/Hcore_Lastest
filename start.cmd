@@ -1,5 +1,5 @@
 @echo off
-TITLE BetterAltay server software for Minecraft: Bedrock Edition
+TITLE Hcore
 cd /d %~dp0
 
 set PHP_BINARY=
@@ -17,7 +17,6 @@ if exist bin\php\php.exe (
 
 if "%PHP_BINARY%"=="" (
 	echo Couldn't find a PHP binary in system PATH or "%~dp0bin\php"
-	echo Please refer to the installation instructions at https://doc.pmmp.io/en/rtfd/installation.html
 	pause
 	exit 1
 )
@@ -28,8 +27,7 @@ if exist BetterAltay.phar (
     if exist src/pocketmine/PocketMine.php (
         set POCKETMINE_FILE=src\pocketmine\PocketMine.php
     ) else (
-      echo BetterAltay.phar not found
-    	echo Downloads can be found at https://github.com/Benedikt05/BetterAltay/releases
+      echo not found
     	pause
     	exit 1
     )
