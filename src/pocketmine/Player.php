@@ -1424,9 +1424,6 @@ class Player extends Human implements CommandSender, ChunkLoader, IPlayer{
 
 		$this->propertyManager->setBlockPos(self::DATA_PLAYER_BED_POSITION, $pos);
 		$this->setPlayerFlag(self::DATA_PLAYER_FLAG_SLEEP, true);
-
-		$this->setSpawn($pos);
-
 		$this->level->setSleepTicks(60);
 		$this->updateBoundingBox(0.2, 0.2);
 
